@@ -6,19 +6,14 @@ Estudo de backend Node-JS com o projeto **Freecodecamp** de Johm Smilga para apr
 
 <br />
 
-
-
-
-Novamente, este projeto trás a mesma implementação modular para a aplicação vistas anteriormente na série de projetos estudados, ou seja, separando módulo para rota, para controladores para as rotas, e embora neste projeto não seja implementado banco de dados, foi deixado separado o módulo para a conexão com o banco de dados MongoDB.
+Assim, começando com conceitos gerais da estrutura assíncrona de funcionamento do Node-JS, passando pelos objetos globais, a modularidade, os módulos básicos e os módulos de terceiros, finalizando esta primeira parte com um estudo sobre os padrões Promise e Async-Await, Events e Stream.
 
 
 <br />
 
-Aqui nós também reaproveitamos os módulos customizados para tratamento de erro criados no projeto **Task Manager**. Assim, os configuramos no middleware do Express-JS para tratar exceções **404** e **500** de servidor.
 
-<br />
+Já a segundo parte do estudo está todo voltado para aprofundar o conhecimento da criação de servidores, especialmente focando no modulo Express-JS.
 
-Finalmente, culminando o projeto com a integração com o Frontend, criado pelo professor Smilga e que é servido pelo servidor através do middleware Static do Express-JS.
 
 
 
