@@ -3,6 +3,8 @@
 // Modules - Encapsulates Code (only share minimum)
 
 const http = require('http');
+const { writeFileSync } = require('fs');
+
 
 
 const server = http.createServer((req, res) => {
@@ -31,6 +33,10 @@ const server = http.createServer((req, res) => {
 	
 		res.end();
 	} else if (req.url === '/about') {
+		for (let i = 0; i < 10000; i++) {
+			writeFileSync('./content/big.txt', `hello world ${i}\n`, { flag: 'a' })
+		}
+		
 		res.write('Here is our short history');
 		
 		res.end();
