@@ -1,8 +1,7 @@
-//https://www.youtube.com/watch?v=Oe421EPjeBE
-// 3 hr 01' 16''
 // MODULES
 // CommonJS, every file is a module (by default)
 // Modules - Encapsulates Code (only share minimum)
+
 
 const { readFile } = require('fs');
 
@@ -54,6 +53,15 @@ getText('./content/first.txt')
 		
 	})
 	.catch((err) => console.log(err));
+
+
+
+
+
+
+
+
+
 
 
 
