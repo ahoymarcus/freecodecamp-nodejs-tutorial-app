@@ -3,7 +3,6 @@
 // Modules - Encapsulates Code (only share minimum)
 
 const http = require('http');
-const { writeFileSync } = require('fs');
 
 
 
@@ -33,9 +32,12 @@ const server = http.createServer((req, res) => {
 	
 		res.end();
 	} else if (req.url === '/about') {
-		for (let i = 0; i < 10000; i++) {
-			writeFileSync('./content/big.txt', `hello world ${i}\n`, { flag: 'a' })
-		}
+		// BLOCKING CODE
+    for (let i = 0; i < 1000; i++) {
+      for (let j = 0; j < 1000; j++) {
+        console.log(`${i} ${j}`)
+      }
+    }
 		
 		res.write('Here is our short history');
 		
