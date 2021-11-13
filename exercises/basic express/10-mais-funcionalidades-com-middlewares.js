@@ -1,8 +1,3 @@
-//https://www.youtube.com/watch?v=Oe421EPjeBE
-// 6 hr 40' 50''
-// MODULES
-// CommonJS, every file is a module (by default)
-// Modules - Encapsulates Code (only share minimum)
 const express = require('express');
 
 const { products } = require('./data/data');
@@ -17,18 +12,24 @@ const app = express();
 // REQUEST -> MIDDLEWARE -> RESPONSE
 app.use([logger]);
 
-
+// inserir middleware em rota específica
 app.get('/', (req, res) => {
+	// const method = req.method;
+	// const url = req.url;
+	// const time = new Date().getFullYear();
 	
 	res.send('Home page');
 });
 
 
 app.get('/about', (req, res) => {
+	// const method = req.method;
+	// const url = req.url;
+	// const time = new Date().getFullYear();
 	
 	res.send('About page');
 });
- 
+
 
 // Rotas API
 app.get('/api/products', [jockerAPI, authorize], (req, res) => {
@@ -50,8 +51,6 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => {
 	console.log(`Server is listening on port ${port}`);
 });
-
-
 
 
 
