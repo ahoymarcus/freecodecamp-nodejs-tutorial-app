@@ -1,8 +1,3 @@
-//https://www.youtube.com/watch?v=Oe421EPjeBE
-// 5 hr 57' 30''
-// MODULES
-// CommonJS, every file is a module (by default)
-// Modules - Encapsulates Code (only share minimum)
 const express = require('express');
 
 const { products } = require('./data/data');
@@ -46,27 +41,12 @@ app.get('/api/products/:productID', (req, res) => {
 });
 
 
-// STUDY CASE
-// REQ.PARAMS
+// Study Case
 app.get('/api/products/:productID/reviews/:reviewID', (req, res) => {
 	console.log('req.params = ', req.params);
 	
 	res.status(200).send('Hello world');
 });
-
-
-// STUDY CASE
-// REQ.QUERY
-app.get('/api/v1/query', (req, res) => {
-	console.log('req.query = ', req.query);
-	
-	res.status(200).send('query route');
-});
-
-
-
-
-
 
 
 
@@ -76,6 +56,10 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => {
 	console.log(`Server is listening on port ${port}`);
 });
+
+
+
+
 
 
 
