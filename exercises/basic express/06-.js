@@ -1,8 +1,3 @@
-//https://www.youtube.com/watch?v=Oe421EPjeBE
-// 5 hr 18' 30''
-// MODULES
-// CommonJS, every file is a module (by default)
-// Modules - Encapsulates Code (only share minimum)
 const express = require('express');
 const path = require('path');
 
@@ -42,6 +37,7 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => {
 	console.log(`Server is listenning on port ${port}`);
 });
+
 
 
 
