@@ -1,5 +1,5 @@
 //https://www.youtube.com/watch?v=Oe421EPjeBE
-// 5 hr 57' 30''
+// 6 hr 10' 50''
 // MODULES
 // CommonJS, every file is a module (by default)
 // Modules - Encapsulates Code (only share minimum)
@@ -60,7 +60,28 @@ app.get('/api/products/:productID/reviews/:reviewID', (req, res) => {
 app.get('/api/v1/query', (req, res) => {
 	console.log('req.query = ', req.query);
 	
-	res.status(200).send('query route');
+	const { search, limit } = req.query;
+	let resultProducts = [...products];
+	
+	if (search) {	
+		resultProducts = resultProducts.filter((product) => {
+			return product.name.startsWith(search);
+		});
+	} 
+	
+	if (limit) {
+		resultProducts = resultProducts.slice(0, parseInt(limit));
+	} 
+	
+	if (resultProducts.length < 1) {
+		// Modo 1: funciona, mas o servidor lança erro
+		// res.status(200).send('No products match your query!');
+		
+		// Modo 2
+		return res.status(200).json({ success: true, data: [] });
+	}
+		
+	res.status(200).json( resultProducts );
 });
 
 
