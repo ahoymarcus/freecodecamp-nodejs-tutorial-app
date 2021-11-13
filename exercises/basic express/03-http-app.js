@@ -1,8 +1,3 @@
-//https://www.youtube.com/watch?v=Oe421EPjeBE
-// 4 hr 48' 40''
-// MODULES
-// CommonJS, every file is a module (by default)
-// Modules - Encapsulates Code (only share minimum)
 const http = require('http');
 const { readFileSync } = require('fs');
 

@@ -28,22 +28,10 @@ Já a segundo parte do estudo está todo voltado para aprofundar o conhecimento 
 
 Dependências:
 
-- Bcryptjs
+
 - Cors
 - Dotenv
 - Express JS
-- Express-async-errors
-- Express-rate-limit
-- Helmet
-- Http-status-codes
-- Joi
-- Jsonwebtoken
-- Mongoose
-- Nodemon
-- Rate-limiter
-- Swagger-ui-express
-- Xss-clean
-- Yamljs
 
 
 
