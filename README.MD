@@ -13,7 +13,9 @@ Assim, começando com conceitos gerais da estrutura assíncrona de funcionamento
 
 
 Já a segundo parte do estudo está todo voltado para aprofundar o conhecimento da criação de servidores, especialmente focando no modulo Express-JS.
-
+Começando com a criação de servidores básicos em HTTP e depois com o Express-JS, para depois estudar o recebimonto de parâmetros e de dados das requisições nas rotas.
+Daí, então, seguindo com o estudo dos middlewares, até a construção de uma API completa com suas rotas fundamentais.
+Finalmente, refatorar a API, modularizando suas rotas em dois módulos específicos: controllers e routes.
 
 
 
